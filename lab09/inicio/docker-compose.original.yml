@@ -1,0 +1,25 @@
+# docker-compose.yml — MySQL 8.4 LTS para el laboratorio (solo para DESARROLLO: las claves están a la vista).
+#   Iniciar:   docker compose up -d        Ver estado:  docker compose ps
+#   Consola:   docker compose exec mysql mysql -u apicultores -p apicultores
+#   Reiniciar los datos desde cero:  docker compose down -v && docker compose up -d
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: apicultores-mysql
+    environment:
+      MYSQL_DATABASE: apicultores
+      MYSQL_USER: apicultores
+      MYSQL_PASSWORD: miel2026
+      MYSQL_ROOT_PASSWORD: raiz2026
+      TZ: America/La_Paz
+    ports:
+      - "3307:3306"            # 3307 en tu PC para no chocar con otro MySQL/XAMPP
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d:ro   # los .sql se ejecutan en orden la PRIMERA vez
+      - datos_mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u", "root", "-praiz2026"]
+      interval: 5s
+      retries: 20
+volumes:
+  datos_mysql:

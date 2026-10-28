@@ -1,0 +1,45 @@
+TECNOLOGIA WEB II - Docente Jim Requena
+Kit de alumnos del laboratorio 1 al 9 con carpetas inicio y TODO sin resolver.
+Actualizacion 14 de octubre de 2026.
+
+SI YA TRABAJASTE EN C:\TW2
+No extraigas el paquete encima de tus archivos.
+Extrae este ZIP en C:\TW2_kit. Debe aparecer C:\TW2_kit\TW2\TW2_Aula.ps1.
+Abre Docker Desktop, espera a que funcione y usa PowerShell:
+
+$Kit = 'C:\TW2_kit\TW2\TW2_Aula.ps1'
+$Curso = 'C:\TW2'
+powershell -NoProfile -ExecutionPolicy Bypass -File $Kit -Accion Parar
+powershell -NoProfile -ExecutionPolicy Bypass -File $Kit -Accion Iniciar -Laboratorio 6 -Raiz $Curso
+
+Si es un equipo nuevo, extrae TW2 directamente en C:\ y usa:
+$Kit = 'C:\TW2\TW2_Aula.ps1'
+$Curso = 'C:\TW2'
+
+Cambiar de laboratorio: repite Iniciar con 7, 8 o 9.
+Iniciar guarda respaldo del Compose si lo cambia, agrega configuracion y soporte ausente,
+detiene contenedores TW2, inicia el seleccionado, prepara autoload y abre el navegador.
+No completa ni reemplaza tus TODO. Si un laboratorio entero falta, lo agrega desde este kit.
+Si una carpeta existente tiene una estructura inesperada, se detiene para conservar tu trabajo.
+
+GUARDAR TODO ANTES DE COMPROBAR
+powershell -NoProfile -ExecutionPolicy Bypass -File $Kit -Accion Sintaxis -Laboratorio 6 -Raiz $Curso
+powershell -NoProfile -ExecutionPolicy Bypass -File $Kit -Accion Verificar -Laboratorio 6 -Raiz $Curso
+
+Las metas son lab06=14/14; lab07=15/15; lab08=15/15; lab09=14/14.
+El verificador guarda salida en evidencias. Puede restaurar datos y limpiar pruebas:
+conserva respaldo de datos y fotos antes de ejecutarlo. Las bases del lab08 y lab09 son independientes.
+No usar bases productivas para estas pruebas. No ejecutar down -v ni system prune para diagnosticar.
+
+Para ver contenedores:
+powershell -NoProfile -ExecutionPolicy Bypass -File $Kit -Accion Estado
+
+Errores: detenerse en el primer error del arranque. No intentar Composer si PHP no arranco.
+El lanzador necesita Docker Desktop con contenedores Linux y Compose que admita up --wait.
+Primeras descargas PHP y MySQL necesitan internet y pueden tardar. Preparar antes de clase.
+La politica Bypass se aplica solo al proceso PowerShell; no modifica la politica permanente.
+Si el equipo institucional bloquea scripts por politica de grupo, solicitar revision a TI.
+Puede seguirse la alternativa manual de la guia.
+
+El soporte Verificador.php incluido mantiene las pruebas de los laboratorios y permite
+realizarlas sin disponer de otros archivos docentes; no es una solucion a los TODO.

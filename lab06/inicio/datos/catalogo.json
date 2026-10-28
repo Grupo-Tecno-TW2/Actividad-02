@@ -1,0 +1,10 @@
+[
+    {"tipo": "producto", "codigo": "MIE-500", "nombre": "Miel multifloral 500 g", "categoria": "Miel", "precio": 45.0, "stock": 32, "socio": "Rosa Chuvé"},
+    {"tipo": "producto", "codigo": "MIE-1K", "nombre": "Miel multifloral 1 kg", "categoria": "Miel", "precio": 85.0, "stock": 18, "socio": "Rosa Chuvé"},
+    {"tipo": "producto", "codigo": "MIE-CUS", "nombre": "Miel de cusi 350 g", "categoria": "Miel", "precio": 55.5, "stock": 0, "socio": "Mario Surubí"},
+    {"tipo": "producto", "codigo": "POL-250", "nombre": "Polen & propóleo (pack 250 g)", "categoria": "Derivados", "precio": 70.0, "stock": 9, "socio": "Elena Masabí"},
+    {"tipo": "producto", "codigo": "PRO-30", "nombre": "Propóleo en gotas 30 ml", "categoria": "Derivados", "precio": 38.0, "stock": 25, "socio": "Elena Masabí"},
+    {"tipo": "producto", "codigo": "CER-1K", "nombre": "Cera pura 1 kg", "categoria": "Cera", "precio": 120.0, "stock": 4, "socio": "Mario Surubí"},
+    {"tipo": "servicio", "codigo": "SRV-EXT", "nombre": "Alquiler de centrífuga extractora", "precio": 150.0, "unidad": "día"},
+    {"tipo": "servicio", "codigo": "SRV-TAL", "nombre": "Taller de iniciación apícola", "precio": 200.0, "unidad": "persona"}
+]

@@ -1,0 +1,13 @@
+name: tw2-lab03-inicio
+services:
+  php:
+    build:
+      context: ../..
+    image: tw2-php:8.3
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ../../comun:/comun:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    command: ["php", "-S", "0.0.0.0:8000", "-t", "public"]

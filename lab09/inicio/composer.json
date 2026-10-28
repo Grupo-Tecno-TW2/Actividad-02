@@ -1,0 +1,15 @@
+{
+    "name": "flor-chiquitania/catalogo",
+    "description": "Catálogo de la Asociación de Apicultores Flor de la Chiquitanía (Tecnología Web II, laboratorio 9)",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Apicultores\\": "src/"
+        },
+        "files": ["src/funciones.php"]
+    }
+}

@@ -1,0 +1,25 @@
+:root { --miel: #b45309; --miel-claro: #fef3c7; --texto: #1f2933; --fondo: #fffbeb; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; color: var(--texto); background: var(--fondo); }
+header { background: var(--miel); color: #fff; padding: 1.5rem 1rem; text-align: center; }
+header h1 { margin: 0; }
+main { max-width: 60rem; margin: 1rem auto; padding: 0 1rem; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+caption { text-align: left; font-weight: 700; padding: .5rem 0; }
+th, td { padding: .5rem; border-bottom: 1px solid #e5d3a1; text-align: left; }
+th { background: var(--miel-claro); }
+.num { text-align: right; }
+.agotado td { color: #6b7280; }
+.insignia { background: #7f1d1d; color: #fff; border-radius: .25rem; padding: .1rem .4rem; font-size: .8rem; }
+footer { text-align: center; font-size: .85rem; padding: 1rem; }
+nav a { color: #fff; }
+form p { margin: .6rem 0; }
+label { display: block; font-weight: 600; }
+input, select { padding: .4rem; min-width: 16rem; }
+.error { display: block; color: #9f1239; font-size: .9rem; }
+.alerta { background: #fee2e2; color: #7f1d1d; padding: .5rem; }
+.exito { background: #dcfce7; color: #14532d; padding: .5rem; }
+button { background: var(--miel); color: #fff; border: 0; padding: .5rem 1rem; border-radius: .25rem; }
+img { border-radius: .25rem; object-fit: cover; }
+.en-linea { display: inline; }
+.en-linea button { background: #7f1d1d; padding: .2rem .5rem; }
